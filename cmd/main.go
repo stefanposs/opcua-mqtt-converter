@@ -1,7 +1,6 @@
 package main
 
 import (
-	"context"
 	"log"
 	"time"
 
@@ -25,8 +24,7 @@ func main() {
 	}
 
 	opcuaClient := opcua.NewClient(cfg.OPCUA.Endpoint)
-	ctx := context.Background()
-	if err := opcuaClient.Connect(ctx); err != nil {
+	if err := opcuaClient.Connect(); err != nil {
 		log.Fatalf("Error connecting to OPC UA server: %v", err)
 	}
 	defer opcuaClient.Disconnect()

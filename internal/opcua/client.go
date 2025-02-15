@@ -8,6 +8,13 @@ import (
 	"github.com/gopcua/opcua/ua"
 )
 
+type OPCUAClient interface {
+	Connect() error
+	Disconnect()
+	ReadNodes(nodes []string) (map[string]*ua.DataValue, error)
+	SubscribeNodes(nodes []string, interval time.Duration, callback func(map[string]*ua.DataValue)) error
+}
+
 type Client struct {
 	client *opcua.Client
 }
@@ -20,7 +27,9 @@ func NewClient(endpoint string) *Client {
 	c := opcua.NewClient(endpoint, opts...)
 	return &Client{client: c}
 }
-func (c *Client) Connect(ctx context.Context) error {
+
+func (c *Client) Connect() error {
+	ctx := context.Background()
 	return c.client.Connect(ctx)
 }
 
