@@ -112,10 +112,8 @@ Run the tests with the following command:
 go test ./...
 ```
 
-## License
+License
+This project is licensed under the MIT License. For more information, see the [License](LICENSE.md) file.
 
-This project is licensed under the MIT License. For more information, see the `LICENSE` file.
-
-## Contribution
-
+Contribution
 Contributions are welcome! Please open an issue or a pull request for suggestions and improvements.
