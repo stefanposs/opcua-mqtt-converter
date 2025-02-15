@@ -1,43 +1,43 @@
 name: Coveralls
 
 on:
-    push:
-      branches:
-        - main
-    pull_request:
-      branches:
-        - main
-  
-  jobs:
-    test:
-      runs-on: ubuntu-latest
-  
-      steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-  
-      - name: Set up Go
-        uses: actions/setup-go@v2
-        with:
-          go-version: 1.23
-  
-      - name: Install dependencies
-        run: go mod tidy
-  
-      - name: Run tests
-        run: go test -v -coverprofile=coverage.out ./...
-  
-      - name: Install gocov
-        run: go install github.com/axw/gocov/gocov@latest
-  
-      - name: Install gocov-xml
-        run: go install github.com/AlekSi/gocov-xml@latest
-  
-      - name: Convert coverage to XML
-        run: gocov convert coverage.out | gocov-xml > coverage.xml
-  
-      - name: Upload coverage to Coveralls
-        uses: coverallsapp/github-action@v1
-        with:
-            github-token: ${{ secrets.COVERALLS_REPO_TOKEN }}
-            path-to-lcov: coverage.out
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: 1.23
+
+    - name: Install dependencies
+      run: go mod tidy
+
+    - name: Run tests
+      run: go test -v -coverprofile=coverage.out ./...
+
+    - name: Install gocov
+      run: go install github.com/axw/gocov/gocov@latest
+
+    - name: Install gocov-xml
+      run: go install github.com/AlekSi/gocov-xml@latest
+
+    - name: Convert coverage to XML
+      run: gocov convert coverage.out | gocov-xml > coverage.xml
+
+    - name: Upload coverage to Coveralls
+      uses: coverallsapp/github-action@v2
+      with:
+        github-token: ${{ secrets.COVERALLS_REPO_TOKEN }}
+        path-to-lcov: coverage.out
