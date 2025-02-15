@@ -1,6 +1,5 @@
 # OPC UA to MQTT Converter
-
-[![Build Status](https://img.shields.io/github/actions/workflow/status/stefanposs/opcua-mqtt-converter/ci.yml?branch=main)](https://github.com/stefanposs/opcua-mqtt-converter/actions)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/stefanposs/opcua-mqtt-converter/coveralls.yml?branch=main)](https://github.com/stefanposs/opcua-mqtt-converter/actions)
 [![Go Report Card](https://goreportcard.com/badge/github.com/stefanposs/opcua-mqtt-converter)](https://goreportcard.com/report/github.com/stefanposs/opcua-mqtt-converter)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Website](https://img.shields.io/badge/Website-Visit-blue)](https://stefanposs.de)
@@ -8,11 +7,13 @@
 [![GoDoc](https://godoc.org/github.com/stefanposs/opcua-mqtt-converter?status.svg)](https://godoc.org/github.com/stefanposs/opcua-mqtt-converter)
 [![Project Status](https://img.shields.io/badge/status-draft-orange)](https://github.com/stefanposs/opcua-mqtt-converter)
 
+
 ## Project Overview
 
 This project is an OPC UA to MQTT converter that retrieves data from an OPC UA server and forwards it in real-time to an MQTT broker. The converter is written in Go (Golang) and offers high performance and scalability. It includes a buffer to temporarily store data in case of connection issues and send it later.
 
 **<span style="color:red">Note:</span>** <span style="color:red">This project is currently in draft status and is not yet stable.</span>
+
 
 ## Use Cases
 
