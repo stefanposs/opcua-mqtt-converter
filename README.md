@@ -113,7 +113,7 @@ go test ./...
 ```
 
 License
-This project is licensed under the MIT License. For more information, see the [License](LICENSE.md) file.
+This project is licensed under the MIT License. For more information, see the [License](LICENSE) file.
 
 Contribution
 Contributions are welcome! Please open an issue or a pull request for suggestions and improvements.
