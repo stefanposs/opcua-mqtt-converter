@@ -1,0 +1,35 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Output of the Go compiler
+*.o
+*.a
+*.out
+
+# Dependency directories
+vendor/
+
+# Go modules
+go.sum
+
+# IDE and editor specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Configuration files
+config.json
+
+# Temporary files
+*.tmp
+*.temp
+
+*example*
