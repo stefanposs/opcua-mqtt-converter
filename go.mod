@@ -1,6 +1,8 @@
 module github.com/stefanposs/opcua-mqtt-converter
 
 go 1.23
+toolchain go1.24.1
+
 require (
 	github.com/eclipse/paho.mqtt.golang v1.3.5
 	github.com/gopcua/opcua v0.2.0
@@ -13,6 +15,6 @@ require (
 	github.com/gorilla/websocket v1.4.2 // indirect
 	github.com/pkg/errors v0.8.1 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
-	golang.org/x/net v0.36.0 // indirect
-	golang.org/x/sys v0.30.0 // indirect
+	golang.org/x/net v0.38.0 // indirect
+	golang.org/x/sys v0.31.0 // indirect
 )
